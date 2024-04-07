@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="FlagToCountryMatchGame.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlagToCountryMatchGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="CornflowerBlue">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="world-map-icon.svg"></ImageBrush>
+        </Grid.Background>
+        <TextBlock x:Name="Title" HorizontalAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" Text="Country Guesser!" VerticalAlignment="Top" FontSize="72"/>
+        <TextBlock TextWrapping="Wrap" Text="Practice" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-200,0,0,150" FontSize="36"/>
+        <Button x:Name="GuessByFlag" CornerRadius="8"  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Guess By Flag" Margin="-200,150,0,0"  Height="65" Width="158" Click="GuessByFlagClicked" Background="#FFFF5858"/>
+        <Button x:Name="GuessByCap" CornerRadius="8" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Guess By Captial" Margin="-200,10,0,0"  Height="65" Width="158" Click="GuessByCapClicked" Background="#FFFF5858"/>
+        <TextBlock TextWrapping="Wrap" Text="Time Attack" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,150" FontSize="36"/>
+        <Button x:Name="GuessByFlagTime" CornerRadius="8" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Guess By Flag" Margin="200,150,0,0"  Height="65" Width="158" Click="GuessByFlagTimeClicked" Background="#FFFF5858"/>
+        <Button x:Name="GuessByCapTime" CornerRadius="8" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Guess By Captial" Margin="200,10,0,0"  Height="65" Width="158" Click="GuessByCapClicked" Background="#FFFF5858"/>
+
+    </Grid>
+
+</Page>

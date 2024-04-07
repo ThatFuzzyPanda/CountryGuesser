@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="FlagToCountryMatchGame.Views.GameScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlagToCountryMatchGame.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="CornflowerBlue">
+
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="world-map-icon.svg"></ImageBrush>
+        </Grid.Background>
+        <TextBlock x:Name="CountryName" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="PlaceHolder" Margin="0,50,0,0" FontSize="48" Height="126"/>
+        <Image x:Name="Flag" HorizontalAlignment="Center" VerticalAlignment="Center" Height="309" Margin="0,0,0,0"/>
+        <TextBlock x:Name="Captial" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Correct Guesses" Margin="0,0,0,0" FontSize="48" Visibility="Collapsed"/>
+        <TextBlock x:Name="CorrectGuesses" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Correct Guesses" Margin="0,0,40,0" FontSize="22"/>
+        <TextBlock x:Name="incorrectGuesses" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Incorrect Guesses" Margin="0,40,26,0" FontSize="22"/>
+        <TextBlock x:Name="TimerText" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Timer" Margin="0,80,30,0" FontSize="22"/>
+        <TextBlock x:Name="CorrectIncorrect" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="PlaceHolder" FontSize="48"  Margin="0,170,0,0"/>
+        <TextBlock x:Name="Hint" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" Text="PlaceHolder" FontSize="36"  Margin="0,0,0,170"/>
+        <Grid>
+
+            <TextBox CornerRadius="8" x:Name="Guess" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" PlaceholderText="Guess Here" Margin="0,722,0,0" FontSize="22" Width="419" />
+            <Button CornerRadius="8" x:Name="NextBtn" Content="Next" Margin="300,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"  Click="NextBtnClicked" Background="#FFFF5858"/>
+            <Button CornerRadius="8" x:Name="HintBtn" Content="Hint" Margin="0,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"  Click="HintBtnClicked" Background="#FFFF5858"/>
+            <Button CornerRadius="8" Content="Guess" Margin="-300,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"  Click="GuesBtnClicked" Background="#FFFF5858"/>
+        </Grid>
+        <Button x:Name="BackBtn" CornerRadius="8" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back to Menu" Margin="30,30,0,0" Click="BackBtn_Click" Background="#FFFF5858"/>
+
+    </Grid>
+
+
+</Page>
