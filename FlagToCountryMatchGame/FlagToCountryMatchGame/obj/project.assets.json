@@ -10394,11 +10394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FlagToCountryMatchGame\\FlagToCountryMatchGame\\FlagToCountryMatchGame.csproj",
+      "projectUniqueName": "C:\\Users\\jdsta\\CountryGuesser\\FlagToCountryMatchGame\\FlagToCountryMatchGame\\FlagToCountryMatchGame.csproj",
       "projectName": "FlagToCountryMatchGame",
-      "projectPath": "E:\\FlagToCountryMatchGame\\FlagToCountryMatchGame\\FlagToCountryMatchGame.csproj",
+      "projectPath": "C:\\Users\\jdsta\\CountryGuesser\\FlagToCountryMatchGame\\FlagToCountryMatchGame\\FlagToCountryMatchGame.csproj",
       "packagesPath": "C:\\Users\\jdsta\\.nuget\\packages\\",
-      "outputPath": "E:\\FlagToCountryMatchGame\\FlagToCountryMatchGame\\obj\\",
+      "outputPath": "C:\\Users\\jdsta\\CountryGuesser\\FlagToCountryMatchGame\\FlagToCountryMatchGame\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

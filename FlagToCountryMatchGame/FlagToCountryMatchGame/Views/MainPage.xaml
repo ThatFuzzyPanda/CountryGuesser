@@ -18,6 +18,7 @@
         <TextBlock TextWrapping="Wrap" Text="Time Attack" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,150" FontSize="36"/>
         <Button x:Name="GuessByFlagTime" CornerRadius="8" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Guess By Flag" Margin="200,150,0,0"  Height="65" Width="158" Click="GuessByFlagTimeClicked" Background="#FFFF5858"/>
         <Button x:Name="GuessByCapTime" CornerRadius="8" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Guess By Captial" Margin="200,10,0,0"  Height="65" Width="158" Click="GuessByCapClicked" Background="#FFFF5858"/>
+        
 
     </Grid>
 

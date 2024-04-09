@@ -25,7 +25,6 @@ namespace FlagToCountryMatchGame.Views
 		
 		int guessCount = 0;
 		int incorrectGuessCount = 0;
-		int start = 60;
 		public static Countries[] countries { get; private set; }
 		public static string GameType;
 		public GameScreen()
@@ -66,26 +65,24 @@ namespace FlagToCountryMatchGame.Views
 		{
 			Hint.Text = $"Hint: The Capital City: {Name}" ;
 		}
-
-		void SetTime()
-		{
-			
-			
-
-
-		}
 		
-
+		void InitGame()
+		{
+            CountryName.Visibility = Visibility.Collapsed;
+            CorrectIncorrect.Visibility = Visibility.Collapsed;
+            Hint.Visibility = Visibility.Collapsed;
+			TimerText.Visibility = Visibility.Collapsed;
+            NextBtn.IsEnabled = false;
+            Guess.IsEnabled = true;
+            HintBtn.IsEnabled = true;
+        }
 		void GameLoop()
 		{
 			int ran = SetRandomNum();
-			CountryName.Visibility = Visibility.Collapsed;
-			CorrectIncorrect.Visibility = Visibility.Collapsed;
-			Hint.Visibility = Visibility.Collapsed;
-			NextBtn.IsEnabled = false;
-			Guess.IsEnabled = true;
-			HintBtn.IsEnabled = true;
-			CorrectGuesses.Text = $"Correct Guesses: {guessCount}";
+		
+			InitGame();
+
+            CorrectGuesses.Text = $"Correct Guesses: {guessCount}";
 			incorrectGuesses.Text = $"Incorrect Guesses: {incorrectGuessCount}";
 			if(GameType == "Flag")
 			{
@@ -103,19 +100,20 @@ namespace FlagToCountryMatchGame.Views
 			}
 			else if (GameType == "FlagTime")
 			{
-				SetTime();
-				SetText(countries[ran].name.common);
-				SetImage(countries[ran].flags.png);
-				if (countries[ran].capital.Length < 1)
-				{
-					SetHint("Doesnt Have One");
-				}
-				else
-				{
-					SetHint(countries[ran].capital[0]);
-				}
-
-			}
+				
+					
+                    SetText(countries[ran].name.common);
+                    SetImage(countries[ran].flags.png);
+                    TimerText.Visibility = Visibility.Visible;
+                    if (countries[ran].capital.Length < 1)
+                    {
+                        SetHint("Doesnt Have One");
+                    }
+                    else
+                    {
+                        SetHint(countries[ran].capital[0]);
+                    }
+            }
 			else
 			{
 				if (countries[ran].capital.Length < 1)
@@ -129,8 +127,6 @@ namespace FlagToCountryMatchGame.Views
 				}
 			}
 		}
-
-
 		private async void GetData()
 		{
 			
@@ -156,23 +152,28 @@ namespace FlagToCountryMatchGame.Views
 			CountryName.Visibility = Visibility.Visible;
 			NextBtn.IsEnabled = true;
 			HintBtn.IsEnabled = false;
-			if (Guess.Text.ToLower() == CountryName.Text.ToLower())
-			{
-				guessCount++;
-				
-				CorrectGuesses.Text = $"Correct Guesses: {guessCount}";
-				incorrectGuesses.Text = $"Incorrect Guesses: {incorrectGuessCount}";
-				CorrectIncorrect.Text = "Correct!";
-				CorrectIncorrect.Visibility = Visibility.Visible;
-			}
-			else
-			{
-				CorrectIncorrect.Text = "Incorrect!";
-				incorrectGuessCount++;
-				CorrectIncorrect.Visibility = Visibility.Visible;
-				Guess.IsEnabled = false;
-			}
-		}
+			CheckGuess();
+
+        }
+		private void CheckGuess()
+		{
+            if (Guess.Text.ToLower() == CountryName.Text.ToLower())
+            {
+                guessCount++;
+
+                CorrectGuesses.Text = $"Correct Guesses: {guessCount}";
+                incorrectGuesses.Text = $"Incorrect Guesses: {incorrectGuessCount}";
+                CorrectIncorrect.Text = "Correct!";
+                CorrectIncorrect.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                CorrectIncorrect.Text = "Incorrect!";
+                incorrectGuessCount++;
+                CorrectIncorrect.Visibility = Visibility.Visible;
+                Guess.IsEnabled = false;
+            }
+        }
 
 		private void BackBtn_Click(object sender, RoutedEventArgs e)
 		{

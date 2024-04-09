@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DFCHcuxXyoOmwWG7gm3ey6SNl/Es1l3cMhBfSdixT8RahFaYP8Q9KHUK1EXAcMsESCbhKtKr1gNOA3XSuF6o+Q==",
+  "dgSpecHash": "oEaWHDe+m/uTgiM+ch810A0f5EhOVXCVMt3AJinnOZpA5vkds3ijbQOyF13SpvG5Y0zbNKj8Xg9lY9FmduyFvg==",
   "success": true,
-  "projectFilePath": "E:\\FlagToCountryMatchGame\\FlagToCountryMatchGame\\FlagToCountryMatchGame.csproj",
+  "projectFilePath": "C:\\Users\\jdsta\\CountryGuesser\\FlagToCountryMatchGame\\FlagToCountryMatchGame\\FlagToCountryMatchGame.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.12-rel-31116-00\\microsoft.net.native.compiler.2.2.12-rel-31116-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.14\\microsoft.net.uwpcoreruntimesdk.2.2.14.nupkg.sha512",

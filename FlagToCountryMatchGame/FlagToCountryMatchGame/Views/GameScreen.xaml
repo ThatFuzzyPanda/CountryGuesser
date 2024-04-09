@@ -12,12 +12,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="world-map-icon.svg"></ImageBrush>
         </Grid.Background>
-        <TextBlock x:Name="CountryName" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="PlaceHolder" Margin="0,50,0,0" FontSize="48" Height="126"/>
+        <TextBlock x:Name="CountryName" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="PlaceHolder" Margin="0,60,0,0" FontSize="48" Height="126"/>
         <Image x:Name="Flag" HorizontalAlignment="Center" VerticalAlignment="Center" Height="309" Margin="0,0,0,0"/>
         <TextBlock x:Name="Captial" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Correct Guesses" Margin="0,0,0,0" FontSize="48" Visibility="Collapsed"/>
         <TextBlock x:Name="CorrectGuesses" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Correct Guesses" Margin="0,0,40,0" FontSize="22"/>
         <TextBlock x:Name="incorrectGuesses" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Incorrect Guesses" Margin="0,40,26,0" FontSize="22"/>
-        <TextBlock x:Name="TimerText" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Timer" Margin="0,80,30,0" FontSize="22"/>
+        <TextBlock x:Name="TimerText" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Timer 00" Margin="0,80,30,0" FontSize="22" Visibility="Collapsed"/>
         <TextBlock x:Name="CorrectIncorrect" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="PlaceHolder" FontSize="48"  Margin="0,170,0,0"/>
         <TextBlock x:Name="Hint" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" Text="PlaceHolder" FontSize="36"  Margin="0,0,0,170"/>
         <Grid>

@@ -1,1 +1,1 @@
-E:\FlagToCountryMatchGame\FlagToCountryMatchGame\FlagToCountryMatchGame.csproj;x86
+C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\FlagToCountryMatchGame.csproj;x86
