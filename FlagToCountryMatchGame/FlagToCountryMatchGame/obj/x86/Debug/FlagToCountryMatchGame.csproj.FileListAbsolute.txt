@@ -100,3 +100,8 @@ C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\obj\
 C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_638316550480000000.json
+C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\obj\x86\Debug\Views\GameOver.g.i.cs
+C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\obj\x86\Debug\Views\GameOver.g.cs
+C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\obj\x86\Debug\Views\GameOver.xaml
+C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\obj\x86\Debug\Views\GameOver.xbf
+C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\bin\x86\Debug\Views\GameOver.xbf

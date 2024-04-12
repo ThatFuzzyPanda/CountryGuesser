@@ -117,8 +117,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Model\Country.cs" />
+    <Compile Include="Model\GameModes.cs" />
+    <Compile Include="Model\GameParams.cs" />
+    <Compile Include="Model\Players.cs" />
     <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GameOver.xaml.cs">
+      <DependentUpon>GameOver.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\GameScreen.xaml.cs">
       <DependentUpon>GameScreen.xaml</DependentUpon>
@@ -150,6 +156,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\GameOver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\GameScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

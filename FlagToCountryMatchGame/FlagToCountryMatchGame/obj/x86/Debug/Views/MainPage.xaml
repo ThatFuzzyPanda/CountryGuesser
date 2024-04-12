@@ -18,7 +18,29 @@
         <TextBlock TextWrapping="Wrap" Text="Time Attack" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,150" FontSize="36"/>
         <Button x:ConnectionId='5' x:Name="GuessByFlagTime" CornerRadius="8" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Guess By Flag" Margin="200,150,0,0"  Height="65" Width="158"                                Background="#FFFF5858"/>
         <Button x:ConnectionId='6' x:Name="GuessByCapTime" CornerRadius="8" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Guess By Captial" Margin="200,10,0,0"  Height="65" Width="158"                           Background="#FFFF5858"/>
-        
+        <TextBlock TextWrapping="Wrap" Text="Highscores For time attack!" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,270" FontSize="36" Foreground="White"/>
+        <ListView x:ConnectionId='7' x:Name="HighScoresList" SelectionMode="None" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,150">
+            <ListView.ItemTemplate>
+            <DataTemplate>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Padding="0,0,0,0" Text="{Binding Name}">
+
+                            </TextBlock>
+                            <TextBlock Grid.Row="0" Padding="100,0,0,0" Text="{Binding Score}">
+
+                            </TextBlock>
+                        </Grid>
+                        
+                    </StackPanel>
+                    
+            </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 

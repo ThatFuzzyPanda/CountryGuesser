@@ -4,6 +4,7 @@ using System;
 using System.ComponentModel;
 using System.Net.Http;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Timers;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -27,14 +28,20 @@ namespace FlagToCountryMatchGame.Views
 		int incorrectGuessCount = 0;
 		public static Countries[] countries { get; private set; }
 		public static string GameType;
-		public GameScreen()
+		GameParams gameParams = new GameParams();
+		DispatcherTimer timer;
+        int timesTicked = 60;
+        int timesToTick = 0;
+        public GameScreen()
 		{
 			this.InitializeComponent();
-			GetData();
+
+			TimerSetup();
+            GetData();
 		}
 		protected override void OnNavigatedTo(NavigationEventArgs e)
 		{
-			GameType = e.Parameter.ToString();
+			gameParams.Gamemode = e.Parameter.ToString();
 		}
 
 		void SetText(string Name)
@@ -76,7 +83,30 @@ namespace FlagToCountryMatchGame.Views
             Guess.IsEnabled = true;
             HintBtn.IsEnabled = true;
         }
-		void GameLoop()
+		void TimerSetup()
+		{
+
+            timer = new DispatcherTimer();
+            timer.Tick += Timer_Tick;
+            timer.Interval = new TimeSpan(0,0,1);
+			
+		} 
+        void Timer_Tick(object sender, object e)
+        {
+            
+            TimerText.Text = $" Time Remaining: {timesTicked}";
+            if (timesTicked < timesToTick)
+            {
+                gameParams.CorrectGuess = guessCount;
+                gameParams.IncorrectGuess = incorrectGuessCount;
+                timer.Stop();
+                Frame.Navigate(typeof(GameOver), gameParams);
+            }
+
+
+            timesTicked--;
+        }
+        void GameLoop()
 		{
 			int ran = SetRandomNum();
 		
@@ -84,9 +114,10 @@ namespace FlagToCountryMatchGame.Views
 
             CorrectGuesses.Text = $"Correct Guesses: {guessCount}";
 			incorrectGuesses.Text = $"Incorrect Guesses: {incorrectGuessCount}";
-			if(GameType == "Flag")
+			if(gameParams.Gamemode == GAMEMODES.PracticeFlag.ToString())
 			{
-				SetText(countries[ran].name.common);
+                EndBtn.Visibility = Visibility.Visible;
+                SetText(countries[ran].name.common);
 				SetImage(countries[ran].flags.png);
 				if(countries[ran].capital.Length < 1)
 				{
@@ -98,10 +129,15 @@ namespace FlagToCountryMatchGame.Views
 				}
 				
 			}
-			else if (GameType == "FlagTime")
+			else if (gameParams.Gamemode == GAMEMODES.TAFlag.ToString())
 			{
-				
-					
+
+				if (!timer.IsEnabled)
+				{
+                    timer.Start();
+
+                }
+					EndBtn.Visibility = Visibility.Collapsed;
                     SetText(countries[ran].name.common);
                     SetImage(countries[ran].flags.png);
                     TimerText.Visibility = Visibility.Visible;
@@ -177,11 +213,20 @@ namespace FlagToCountryMatchGame.Views
 
 		private void BackBtn_Click(object sender, RoutedEventArgs e)
 		{
-			Frame.Navigate(typeof(MainPage), null);
+            timer.Stop();
+            Frame.Navigate(typeof(MainPage), null);
 		}
 		private void HintBtnClicked(object sender, RoutedEventArgs e)
 		{
 			Hint.Visibility = Visibility.Visible;
 		}
-	}
+
+        private void EndBtn_Click(object sender, RoutedEventArgs e)
+        {
+            gameParams.CorrectGuess = guessCount;
+            gameParams.IncorrectGuess = incorrectGuessCount;
+            timer.Stop();
+            Frame.Navigate(typeof(GameOver), gameParams);
+        }
+    }
 }

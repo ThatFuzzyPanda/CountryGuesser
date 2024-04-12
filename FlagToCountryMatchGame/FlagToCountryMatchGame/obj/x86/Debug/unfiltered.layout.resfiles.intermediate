@@ -8,6 +8,7 @@ Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 FlagToCountryMatchGame.xr.xml
 Views\App.xbf
+Views\GameOver.xbf
 Views\GameScreen.xbf
 Views\MainPage.xbf
 Properties\Default.rd.xml

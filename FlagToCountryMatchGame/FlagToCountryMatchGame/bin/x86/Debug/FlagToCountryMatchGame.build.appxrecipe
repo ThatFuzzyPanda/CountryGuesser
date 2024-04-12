@@ -79,6 +79,9 @@
     <AppxPackagedFile Include="C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\bin\x86\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\bin\x86\Debug\Views\GameOver.xbf">
+      <PackagePath>Views\GameOver.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jdsta\CountryGuesser\FlagToCountryMatchGame\FlagToCountryMatchGame\bin\x86\Debug\Views\GameScreen.xbf">
       <PackagePath>Views\GameScreen.xbf</PackagePath>
     </AppxPackagedFile>

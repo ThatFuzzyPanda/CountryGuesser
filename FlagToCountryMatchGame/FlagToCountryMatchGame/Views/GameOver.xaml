@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="FlagToCountryMatchGame.Views.GameOver"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlagToCountryMatchGame.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="CornflowerBlue">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="world-map-icon.svg"></ImageBrush>
+        </Grid.Background>
+        <TextBlock x:Name="Title" HorizontalAlignment="Center" Margin="0,200,0,0" TextWrapping="Wrap" Text="Game Over!" VerticalAlignment="Top" FontSize="72" Foreground="White"/>
+        <TextBlock x:Name="CorrectGuess" HorizontalAlignment="Center" Margin="0,300,0,0" TextWrapping="Wrap" Text="Correct Guess:" VerticalAlignment="Top" FontSize="55" Foreground="White"/>
+        <TextBlock x:Name="IncorrectGuess"  HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" Text="Incorrect Guess:" VerticalAlignment="Center" FontSize="55" Foreground="White"/>
+        <TextBlock x:Name="Name"  HorizontalAlignment="Center" Margin="0,400,0,0" TextWrapping="Wrap" Text="Enter Your Name to be added to scoreBoard" VerticalAlignment="Center" FontSize="30" Foreground="White"/>
+        <TextBox TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="" PlaceholderText="Enter your Name!" Margin="0, 500,0,0" Width="261"/>
+
+        <Button CornerRadius="8" x:Name="PlayAgain" Content="Play Again" Margin="200,0,0,70" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"  Background="#FFFF5858" Click="PlayAgain_Click"/>
+        <Button CornerRadius="8" x:Name="MainMenu" Content="Main Menu" Margin="-200,0,0,70" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"   Background="#FFFF5858" Click="MainMenu_Click"/>
+        
+    </Grid>
+</Page>

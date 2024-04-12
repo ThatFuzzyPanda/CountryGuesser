@@ -17,18 +17,18 @@
         <TextBlock x:ConnectionId='4' x:Name="Captial" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Correct Guesses" Margin="0,0,0,0" FontSize="48" Visibility="Collapsed"/>
         <TextBlock x:ConnectionId='5' x:Name="CorrectGuesses" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Correct Guesses" Margin="0,0,40,0" FontSize="22"/>
         <TextBlock x:ConnectionId='6' x:Name="incorrectGuesses" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Incorrect Guesses" Margin="0,40,26,0" FontSize="22"/>
-        <TextBlock x:ConnectionId='7' x:Name="TimerText" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Timer 00" Margin="0,80,30,0" FontSize="22" Visibility="Collapsed"/>
+        <TextBlock x:ConnectionId='7' x:Name="TimerText" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="" Margin="0,80,30,0" FontSize="22" Visibility="Collapsed"/>
         <TextBlock x:ConnectionId='8' x:Name="CorrectIncorrect" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="PlaceHolder" FontSize="48"  Margin="0,170,0,0"/>
         <TextBlock x:ConnectionId='9' x:Name="Hint" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" Text="PlaceHolder" FontSize="36"  Margin="0,0,0,170"/>
         <Grid>
 
-            <TextBox x:ConnectionId='11' CornerRadius="8" x:Name="Guess" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" PlaceholderText="Guess Here" Margin="0,722,0,0" FontSize="22" Width="419" />
-            <Button x:ConnectionId='12' CornerRadius="8" x:Name="NextBtn" Content="Next" Margin="300,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"                         Background="#FFFF5858"/>
-            <Button x:ConnectionId='13' CornerRadius="8" x:Name="HintBtn" Content="Hint" Margin="0,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"                         Background="#FFFF5858"/>
-            <Button x:ConnectionId='14' CornerRadius="8" Content="Guess" Margin="-300,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"                         Background="#FFFF5858"/>
+            <TextBox x:ConnectionId='12' CornerRadius="8" x:Name="Guess" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" PlaceholderText="Guess Here" Margin="0,722,0,0" FontSize="22" Width="419" />
+            <Button x:ConnectionId='13' CornerRadius="8" x:Name="NextBtn" Content="Next" Margin="300,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"                         Background="#FFFF5858"/>
+            <Button x:ConnectionId='14' CornerRadius="8" x:Name="HintBtn" Content="Hint" Margin="0,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"                         Background="#FFFF5858"/>
+            <Button x:ConnectionId='15' CornerRadius="8" Content="Guess" Margin="-300,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="133" Height="43"                         Background="#FFFF5858"/>
         </Grid>
         <Button x:ConnectionId='10' x:Name="BackBtn" CornerRadius="8" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back to Menu" Margin="30,30,0,0"                       Background="#FFFF5858"/>
-
+        <Button x:ConnectionId='11' x:Name="EndBtn" CornerRadius="8" HorizontalAlignment="Left" VerticalAlignment="Top" Content="End Game" Margin="30,70,0,0"  Background="#FFFF5858"                      Visibility="Collapsed"/>
     </Grid>
 
 
